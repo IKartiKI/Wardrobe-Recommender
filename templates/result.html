@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Similar Wardrobe Recommendations</title>
+</head>
+<body>
+    <h1>Similar Wardrobe Recommendations</h1>
+    <ul>
+        {% for item in similar_items %}
+            <li>
+                <img src="{{ url_for('wardrobe_file', filename=item) }}" alt="{{ item }}" style="width:200px;">
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Upload Another Image</a>
+</body>
+</html>
